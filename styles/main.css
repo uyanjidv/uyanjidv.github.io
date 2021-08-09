@@ -1332,6 +1332,7 @@ a.purple-link {
   line-height: 1.725;
   margin-bottom: 16px;
   color: var(--c-base-blacklight);
+  font-size: 1em;
 }
 .post-content p code {
   padding: 0 3px;
