@@ -1175,6 +1175,7 @@ a.purple-link {
 .content-container {
   flex: 1;
   padding: 48px 16px 32px;
+  width: 100%;
 }
 .post-item {
   display: flex;
