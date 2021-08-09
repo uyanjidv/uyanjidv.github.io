@@ -43,7 +43,7 @@ html {
 html {
   line-height: 1.15;
   /* 1 */
-  -webkit-text-size-adjust: 100%;
+  -webkit-text-size-adjust: none;
   /* 2 */
 }
 /* Sections
@@ -53,7 +53,7 @@ html {
  */
 body {
   margin: 0;
-  font-size: 16px;
+  font-size: 100%;
 }
 /**
  * Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
@@ -1175,7 +1175,6 @@ a.purple-link {
 .content-container {
   flex: 1;
   padding: 48px 16px 32px;
-  width: 100%;
 }
 .post-item {
   display: flex;
