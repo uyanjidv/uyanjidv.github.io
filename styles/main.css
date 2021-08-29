@@ -1373,7 +1373,7 @@ a.purple-link {
   display: block;
 }
 .post-content pre code:after {
-  content: 'CODE';
+  content: 'CODEX';
   display: block;
   position: absolute;
   left: 8px;
