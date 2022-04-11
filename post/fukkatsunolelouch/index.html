@@ -48,7 +48,6 @@ body, html {
                 height: 98%;
                 padding: 0;
                 top: 0;
-                background-color: rgba(0, 0, 0, .5);
             }
 
             .play:hover .fil1 {
@@ -135,7 +134,7 @@ body, html {
     
     <div class="videos">
             <div class="active initial closing">
-                <video autoplay="autoplay" loop>
+                <video controls preload="auto" poster="5.jpg">
                     <source src="Coffee.MP4" type="video/mp4">
                 </video>
             </div>
@@ -199,10 +198,7 @@ body, html {
                     <source src="https://www.dropbox.com/s/7qu0yf0vio0o7l4/dd.MP4?raw=1" type="video/mp4">
                 </video>
             </div>
-            <div class="play">
-                <?xml version='1.0' encoding='utf-8'?><svg xmlns="http://www.w3.org/2000/svg" width="91.44mm" height="91.44mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 9144 9144"> <defs> <style type="text/css">  .fil0 {fill:#fff} .fil1 {fill:#ccc;fill-rule:nonzero}  </style> </defs> <g id="Layer_x0020_1"> <metadata id="CorelCorpID_0Corel-Layer"/> <g id="_2744492901664"><g> <path class="fil1" d="M6601 4572c0,-560 -227,-1067 -594,-1435 -368,-367 -875,-594 -1435,-594 -560,0 -1067,227 -1435,594 -367,368 -594,875 -594,1435 0,560 227,1067 594,1435 368,367 875,594 1435,594 560,0 1067,-227 1435,-594 367,-368 594,-875 594,-1435zm-2513 791l1231 -791 -1231 -792 0 1583zm1442 -717l-1478 949c-14,11 -32,17 -52,17 -49,0 -88,-39 -88,-88l0 -1905 0 0c0,-16 4,-33 14,-48 26,-40 81,-52 122,-26l1480 952 2 149zm26 -122c26,41 14,96 -26,122l26 -122zm575 -1511c399,399 646,950 646,1559 0,609 -247,1160 -646,1559 -399,399 -950,646 -1559,646 -609,0 -1160,-247 -1559,-646 -399,-399 -646,-950 -646,-1559 0,-609 247,-1160 646,-1559 399,-399 950,-646 1559,-646 609,0 1160,247 1559,646z"/></g></g></g></svg>
-                <!-- SVG courtesy of Pixabay: https://pixabay.com/en/play-icon-player-button-outline-2935460/ -->
-            </div>
+            <div class="play"></div>
             <div class="menu hide">
                 <div class="menu-wrapper">
                     <div class="initial hide">
@@ -216,7 +212,7 @@ body, html {
                     <div class="options hide">
                         <ul>
                             <li><a id="cat-person">A C.C. person! <--</a></li>
-                            <li><a id="dog-person">A L.L person! <--</a></li>
+                            <li><a id="dog-person">A L.L. person! <--</a></li>
                         </ul>
                     </div>
                 </div>
