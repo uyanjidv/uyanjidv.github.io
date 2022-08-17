@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="calamansi.min.css">
 </head>
   <body>
+  <div id="wrapper">
     <div id="app" class="main">
       <div class="content-container">
         <div class="post-detail">
@@ -39,6 +40,7 @@
         </div>
       </div>
     </div>
+    </div>
     
 <div style="width: 100%; position: fixed; bottom: 0;">
     <div id="player1">
@@ -63,7 +65,8 @@ var player = new Calamansi(document.querySelector('#player1'), {
         },
         defaultAlbumCover: 'we.JPG',
     });
-document.onpointerover = function(){
+var wrapper = document.getElementById("wrapper");
+wrapper.onpointerover = function(){
 if(player.audio.currentTime==0){
       player.audio.play();
 }
