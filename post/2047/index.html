@@ -1,1 +1,62 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+<title>最后最后，还是得靠叔本华？给翻电</title>
+<meta name="description" content="2046">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://uyanjidv.github.io/favicon.ico?v=1">
+<link rel="stylesheet" href="/styles/main.css">
+<link rel="stylesheet" href="/styles/dist/calamansi.min.css">
+</head>
+  <body>
+  <div id="wrapper">
+    <div id="app" class="main">
+      <div class="content-container">
+        <div class="post-detail">
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 夜長月十六</span>  
+          </div>
+          <div class="post-content">
+          <br><br><br><br><br>
+<p>靖雯説我寫的《2047》結局太悲了，看看能不能改改。</p>
+<br><br><br><br><br>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    
+<div style="width: 100%; position: fixed; bottom: 0;">
+    <div id="player1">
+        Loading player...
+    </div>
+</div>
+
+
+<script src="/styles/dist/calamansi.min.js"></script>
+<script>
+var player = new Calamansi(document.querySelector('#player1'), {
+        skin: '/styles/dist/skins/ayon',
+        playlists: {
+            'Classics': [
+                {
+                    source: 'https://www.dropbox.com/s/d9u21j5ymzpp9qa/%E6%9C%80%E5%90%8E%E6%9C%80%E5%90%8E%EF%BC%8C%E8%BF%98%E6%98%AF%E5%BE%97%E9%9D%A0%E5%8F%94%E6%9C%AC%E5%8D%8E%EF%BC%9F%E7%BB%99%E7%BF%BB%E7%94%B5.mp3?raw=1',
+                    info: {
+                        title: '豹变电台-最后最后，还是得靠叔本华？给翻电',
+                          },
+                },
+            ],
+        },
+        defaultAlbumCover: '梦幻白鼬猫.gif',
+    });
+var wrapper = document.getElementById("wrapper");
+wrapper.onpointerover = function(){
+if(player.audio.currentTime==0){
+      player.audio.play();
+}
+}
+</script>
+  </body>
+</html>
