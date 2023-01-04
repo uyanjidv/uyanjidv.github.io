@@ -1,1 +1,265 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" >
+<title>Sky: Cancellation of the Light</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="shortcut icon" href="https://uyanjidv.github.io/favicon.ico?v=1">
+<link rel="stylesheet" href="/styles/main.css">
+<style>
+            .hide {
+                display: none;
+            }
+
+            .initial {
+                display: block;
+            }
+
+            .videos {
+                position: relative;
+                max-width: 768px;
+                margin: 0 auto;
+            }
+
+            .videos video {
+                max-width: 100%;
+                height: auto;
+            }
+
+            .play {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                padding: 0;
+                top: 0;
+            }
+
+            .play:hover .fil1 {
+                fill: #fff;
+            }
+
+            .menu {
+                height: 100%;
+                background-color: rgba(0, 0, 0, .5);
+            }
+
+            .menu, .menu-wrapper {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -51%);
+                width: 100%;
+                padding: 0;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .menu, .menu a {
+                color: #fff;
+            }
+
+            .menu a:hover {
+                cursor: pointer;
+            }
+
+            .menu ul li {
+                list-style-type: none;
+            }
+
+            @media only screen and (min-width: 768px) {
+                .menu ul li {
+                    display: inline-block;
+                    margin-right: 30px;
+                }
+            }
+
+            @media only screen and (max-width: 450px) {
+                .show-below-450 {
+                    display: block !important;
+                    color: red;
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+            }
+</style>
+</head>
+  <body>
+    <div id="app" class="main">
+      <div class="content-container">
+        <div class="post-detail">
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 師走十四</span>  
+          </div>
+          <div class="post-content">
+    <div class="videos">
+            <div class="active initial">
+                <video controls preload="auto">
+                    <source src="https://www.dropbox.com/s/62r5okpqjrska57/Infomercial.mp4?raw=1" type="video/mp4">
+                </video>
+            </div>
+            <div class="closing hide">
+                <video muted>
+                    <source src="https://www.dropbox.com/s/uggl693doomm70j/Darker.mp4?raw=1" type="video/mp4">
+                </video>
+            </div>
+            <div class="cat hide">
+                <video>
+                    <source src="https://www.dropbox.com/s/wujmg7rchsl3lol/Walden.mp4?raw=1" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="dog hide">
+                <video>
+                    <source src="https://www.dropbox.com/s/exbfahbhh46ekwc/live1.mp4?raw=1" type="video/mp4">
+                </video>
+            </div>
+            <div class="dog hide">
+                <video>
+                    <source src="https://www.dropbox.com/s/irsla4j4zr7s786/live2.mp4?raw=1" type="video/mp4">
+                </video>
+            </div>
+            <div class="dog hide">
+                <video>
+                    <source src="https://www.dropbox.com/s/d8she1umb1lvgct/live3.mp4?raw=1" type="video/mp4">
+                </video>
+            </div>
+            <div class="dog hide">
+                <video>
+                    <source src="https://www.dropbox.com/s/ilm2yadr186opag/live4.mp4?raw=1" type="video/mp4">
+                </video>
+            </div>
+            <div class="play"></div>
+            <div class="menu hide">
+                <div class="menu-wrapper">
+                    <div class="initial hide">
+                        <h3 style="color:white;">High internet speed required</h1>
+                        <h4 style="color:white;"></h2>
+                    </div>
+                    <div class="closing hide">
+                        <h3 style="color:white;"></h3>
+                        <h4 style="color:white;">Would you like to choose a different option now?</h4>
+                    </div>
+                    <div class="options hide">
+                        <ul>
+                            <li><a id="cat-person">Remixed Version</a></li>
+                            <li><a id="dog-person">Live Version</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hide show-below-450 mb15">
+            <p>Please, change your phone to landscape view.</p>
+        </div>
+        
+            <br>
+            <a href="https://www.dropbox.com/s/wujmg7rchsl3lol/Walden.mp4?dl=1" target="_blank">Download</a>
+        
+        
+          </div>
+        </div>
+      </div>
+    </div>
+    
+<script type="text/javascript">
+
+        window.onload = function() {
+            var videosContainer = document.getElementsByClassName("videos")[0];
+            var menu = document.getElementsByClassName("menu")[0];
+            var menuOptions = menu.getElementsByClassName("options")[0];
+
+            var playButton = document.getElementsByClassName("play")[0];
+            playButton.onclick = function() {
+                playButton.style.display = "none";
+                playInitialMenu();
+            }
+
+            var catPersonLink = document.getElementById("cat-person");
+            catPersonLink.onclick = function() {
+                showVideos(0, videosContainer.getElementsByClassName("cat"));
+            }
+
+            var dogPersonLink = document.getElementById("dog-person");
+            dogPersonLink.onclick = function() {
+                showVideos(0, videosContainer.getElementsByClassName("dog"));
+            }
+
+            function playInitialMenu() {
+                playVideo(videosContainer.getElementsByClassName("initial")[0], loop=true);
+
+                setTimeout (function () {
+                    menu.style.display = "block";
+                    menu.getElementsByClassName("initial")[0].style.display = "block";
+                    menuOptions.style.display = "block";
+                }, 1000);
+            };
+
+            function playClosingMenu() {
+                playVideo(videosContainer.getElementsByClassName("closing")[0], loop=true);
+
+                menu.getElementsByClassName("initial")[0].style.display = "none";
+
+                setTimeout (function () {
+                    menu.style.display = "block";
+                    menu.getElementsByClassName("closing")[0].style.display = "block";
+                    menuOptions.style.display = "block";
+                }, 1000);
+            };
+
+            function playVideo(videoContainer, loop=false) {
+                var lastVideoContainer = videosContainer.getElementsByClassName("active")[0];
+                lastVideoContainer.classList.remove("active");
+                lastVideoContainer.style.display = "none";
+
+                videoContainer.style.display = "block";
+                videoContainer.classList.add("active");
+
+                var video = videoContainer.getElementsByTagName("video")[0];
+                video.preload = "auto";
+                video.load();
+                video.play();
+                video.loop = loop;
+
+                return video;
+            }
+
+            function showVideos(index, videos) {
+                if (index < (videos.length - 1)) {
+                    hasNextVideo = true;
+                } else {
+                    hasNextVideo = false;
+                }
+
+                menu.style.display = "none";
+
+                var video = playVideo(videos[index]);
+
+                video.addEventListener("timeupdate", function() {
+                    var currentTime = (this.currentTime / this.duration) * 100;
+
+                    if (hasNextVideo && currentTime > 70) {
+                        nextVideo = videos[index + 1];
+                        nextVideoTag = nextVideo.getElementsByTagName("video")[0];
+                        nextVideoTag.preload = "auto";
+                    }
+                })
+
+                video.onended = function() {
+                    if (hasNextVideo) {
+                        showVideos(index+1, videos);
+                    } else {
+                        playClosingMenu();
+                    }
+                }
+            }
+        }
+        </script>
+  </body>
+</html>
